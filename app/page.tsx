@@ -1,17 +1,12 @@
 import Image from "next/image";
+import Footer from "./components/footer";
+import Card from "./components/card";
+import Header from "./components/header";
 
 export default function Home() {
   return (
     <main className="bg-cover bg-center bg-[url(/images/imagem.png)] min-h-screen text-blue-950 ">
-      <header className=" flex items-center justify-around p-3 shadow-lg">
-        <h1 className="text-3xl ">
-          J<span className="text-green-600 text-3xl font-bold">T</span>J <span className="ml-2 font-semibold">Multiserviços</span>
-        </h1>
-        
-        <button className="bg-green-600 text-white hover:bg-green-500 px-4 py-2 rounded-lg font-medium transition cursor-pointer ">
-          Agendar agora
-        </button>
-      </header>
+      <Header/>
 
       <section className="max-w-6xl mx-auto mt-10 p-10  rounded-xl shadow-sm ">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
@@ -33,7 +28,7 @@ export default function Home() {
           </div>
     
           
-          <div className="w-full md:w-[450px] h-[300px] relative rounded-2xl overflow-hidden shadow-2xl">
+          <div className="w-full md:w-[450px] h-[350px] relative rounded-2xl overflow-hidden shadow-2xl">
             <Image
               src="/images/image.png" 
               alt="Consultoria em viagens e serviços migratórios"
@@ -42,42 +37,52 @@ export default function Home() {
             />
           </div>
         </div>
-
         
-        <div className="mt-20 flex flex-col items-center">
-          <h5 className="text-2xl font-bold border-b-4 border-green-600 pb-2 mb-10">
-            Nossos Serviços
-          </h5>
-          
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-            
-            <div className=" p-6 rounded-xl border border-zinc-200 hover:shadow-md transition">
-              <div className="text-3xl mb-4">✈️</div>
-              <h6 className="font-bold text-lg mb-2">Passagens Aéreas</h6>
-              <p className="text-sm text-blue-900">Emissão de passagens com as melhores rotas e tarifas.</p>
-            </div>
+        <Card/>
 
-            <div className=" p-6 rounded-xl border border-zinc-200 hover:shadow-md transition">
-              <div className="text-3xl mb-4">🪪</div>
-              <h6 className="font-bold text-lg mb-2">Naturalização</h6>
-              <p className="text-sm text-blue-900">Processos completos para sua cidadania e naturalização.</p>
-            </div>
-            <div className=" p-6 rounded-xl border border-zinc-200 hover:shadow-md transition">
-              <div className="text-3xl mb-4">🪪</div>
-              <h6 className="font-bold text-lg mb-2">Naturalização</h6>
-              <p className="text-sm text-blue-900">Processos completos para sua cidadania e naturalização.</p>
-            </div>
-            <div className=" p-6 rounded-xl border border-zinc-200 hover:shadow-md transition">
-              <div className="text-3xl mb-4">🪪</div>
-              <h6 className="font-bold text-lg mb-2">Naturalização</h6>
-              <p className="text-sm text-blue-900">Processos completos para sua cidadania e naturalização.</p>
-            </div>
-            
-            
+        <div className="mt-24 flex flex-col md:flex-row justify-between gap-16">
+          <div className="max-w-xl">
+            <h4 className="text-xl font-bold border-b-2 border-green-600 pb-2 mb-6">
+              Outros Serviços
+            </h4>
+
+            <ul className="space-y-4 text-blue-900">
+              <li className="bg-white/40 p-4 rounded-lg">
+                Auxílio no agendamento na Polícia Federal (RNM e outros)
+              </li>
+              <li className="bg-white/40 p-4 rounded-lg">
+                Emissão de Antecedentes Criminais
+              </li>
+              <li className="bg-white/40 p-4 rounded-lg">
+                Venda de passagens aéreas nacionais e internacionais
+              </li>
+            </ul>
           </div>
+
+          <div className="flex-1 bg-white/50 p-8 rounded-xl shadow-sm">
+            <h4 className="text-2xl font-bold text-blue-950 mb-4">
+             Entre em contacto conosco
+            </h4>
+
+            <p className="text-blue-900 mb-6 leading-relaxed">
+             Fale agora com um de nossos especialistas e agende seu atendimento
+             de forma rápida e segura.
+            </p>
+
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <button className="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-lg font-semibold transition">
+               Atendimento via WhatsApp
+              </button>
+
+              <span className="text-blue-950 font-medium">
+               ou ligue para <br/> <strong>(11) 97033-0688</strong>
+              </span>
+            </div>
+          </div>
+
         </div>
       </section>
+      <Footer/>
     </main>
   );
 }
