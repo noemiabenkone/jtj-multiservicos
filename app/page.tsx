@@ -1,4 +1,5 @@
-import Image from "next/image";
+import Image from "next/image"
+import WhatsAppButton from "./components/whatsappButton";
 import Footer from "./components/footer";
 import Card from "./components/card";
 import Header from "./components/header";
@@ -22,9 +23,9 @@ export default function Home() {
               Oferecemos acompanhamento integral desde passagens e seguros até processos de naturalização e agendamentos oficiais. Cuidamos da sua jornada do início ao fim para garantir caminhos abertos e total tranquilidade.
             </p>
 
-            <button className="bg-green-600 text-white px-6 py-3 mt-6 rounded-lg font-bold hover:bg-green-700 transition gap-2">
-              Quero Falar Com um Especialista Via WhatsApp
-            </button>
+            <WhatsAppButton
+              label="Atendimento via WhatsApp"
+            />
           </div>
     
           
@@ -70,9 +71,10 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-              <button className="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-lg font-semibold transition">
-               Atendimento via WhatsApp
-              </button>
+              <WhatsAppButton
+               label="Atendimento via WhatsApp"
+              />
+
 
               <span className="text-blue-950 font-medium">
                ou ligue para <br/> <strong>(11) 97033-0688</strong>
