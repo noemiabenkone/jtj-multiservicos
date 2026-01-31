@@ -1,3 +1,5 @@
+
+import { supabase } from "./lib/supabaseClient"
 import Image from "next/image"
 import WhatsAppButton from "./components/whatsappButton";
 import Footer from "./components/footer";
@@ -5,6 +7,8 @@ import Card from "./components/card";
 import Header from "./components/header";
 
 export default function Home() {
+
+  console.log("Supabase client:", supabase)
   return (
     <main className="bg-cover bg-center bg-[url(/images/imagem.png)] min-h-screen text-blue-950 ">
       <Header/>
