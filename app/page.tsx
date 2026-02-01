@@ -9,6 +9,7 @@ import Header from "./components/header";
 export default function Home() {
 
   console.log("Supabase client:", supabase)
+  
   return (
     <main className="bg-cover bg-center bg-[url(/images/imagem.png)] min-h-screen text-blue-950 ">
       <Header/>
