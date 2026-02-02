@@ -7,7 +7,7 @@ export default function Header() {
         <header className=" flex items-center justify-around p-3 shadow-lg">
         <div className="flex items-center gap-3">
         <Image
-          src="/images/image-copy.png"
+          src="/images/logo-JTJ.png"
           alt="JTJ Multiserviços"
           width={165}
           height={55}
