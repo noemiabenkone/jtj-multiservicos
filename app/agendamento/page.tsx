@@ -80,7 +80,7 @@ export default function Agendamento() {
           <p className="mb-4 text-sm text-green-600 text-center">{sucesso}</p>
         )}
 
-        <form onSubmit={handleSubmit} className="space-y-5 text-blue-950">
+        <form onSubmit={handleSubmit} className="space-y-5 text-blue-900">
           <div>
             <label className="block text-sm font-medium text-blue-900 mb-1">
               Nome completo
